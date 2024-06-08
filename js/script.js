@@ -5,7 +5,8 @@ var productDescInput = document.getElementById("productDescInput")
 var addUpdateBtn = document.getElementById("addUpdateBtn")
 var cancelBtnContainer = document.getElementById("cancelBtnContainer")
 var productsArr = JSON.parse(localStorage.getItem("products")) ?? [];
-var searchInput = document.getElementById("searchInput")
+var searchInput = document.getElementById ("searchInput")
+
 
 displayProducts()
 
@@ -22,8 +23,7 @@ function addUpdateProduct() {
     }
 
     onDataChange()
-    var inputs = [productNameInput, productPriceInput, productCategoryInput, productDescInput]
-    clearForm(inputs)
+    clearForm()
 
 }
 
@@ -70,11 +70,11 @@ function displayProducts() {
 }
 
 
-function clearForm(inputs) {
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].value = "";
-
-    }
+function clearForm() {
+    productNameInput.value = "";
+    productPriceInput.value = "";
+    productCategoryInput.value = "";
+    productDescInput.value = "";
 }
 
 function onDataChange() {
@@ -111,6 +111,5 @@ function cancel() {
     clearForm()
     addUpdateBtn.innerHTML = "Add Product"
     cancelBtnContainer.innerHTML = ""
-    updateMode = false;
-
+    updateMode = false
 }
