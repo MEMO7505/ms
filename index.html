@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/logo-icon-24.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ICON</title>
+</head>
+
+<body class="bg-secondary">
+
+    <div class="home">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+              <a class="navbar-brand" href="#"><div class="logo rounded-pill"><img class="img-fluid rounded-pill" src="img/ICON_Default_Social_Image_Template.jpeg" alt="logo"></div></a>
+          </nav>
+        <div class="container py-5">
+            <form>
+                <div class="form-group mt-3">
+                    <label class="text-main mb-2" for="productNameInput">ProductName : </label>
+                    <input class="form-control" type="text" id="productNameInput" placeholder="Ex. Samsung">
+                </div>
+                <div class="form-group mt-3">
+                    <label class="text-main mb-2" for="productPriceInput">ProductPrice : </label>
+                    <input class="form-control" type="number" id="productPriceInput">
+                </div>
+                <div class="form-group mt-3">
+                    <label class="text-main mb-2" for="productCategoryInput">ProductCategory : </label>
+                    <input class="form-control" type="text" id="productCategoryInput">
+                </div>
+                <div class="form-group mt-3">
+                    <label class="text-main mb-2" for="productDescInput">productDesc : </label>
+                    <textarea class="form-control" type="text" id="productDescInput"></textarea>
+                </div>
+        
+                <div class="d-flex w-100 justify-content-between">
+                    <div class="d-flex">
+                        <button type="button" onclick="addUpdateProduct()" id="addUpdateBtn" class="btn btn-info my-5 me-2 ">Add
+                            Product</button>
+                        <div id="cancelBtnContainer">
+                        </div>
+                    </div>
+                    <button type="button" onclick="clearData()" class="btn btn-danger my-5">Clear Data</button>
+                </div>
+            </form>
+           <div class="dataTable">
+            <table class="table overflow-x-auto mb-5">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Product Category</th>
+                        <th>product Desc</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+    
+    
+                <tbody id="tableBody">
+    
+                </tbody>
+            </table>
+    
+           </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
