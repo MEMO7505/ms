@@ -6,7 +6,7 @@ var addUpdateBtn = document.getElementById("addUpdateBtn")
 var cancelBtnContainer = document.getElementById("cancelBtnContainer")
 var productsArr = JSON.parse(localStorage.getItem("products")) ?? [];
 var searchInput = document.getElementById("searchInput")
-
+const d = (new Date).toISOString().split("T")[0];
 
 displayProducts()
 
@@ -55,7 +55,8 @@ function displayProducts() {
     for (var i = 0; i < productsArr.length; i++) {
         cartoona += `
         <tr>
-            <td>${i}</td>
+            <td>${i+1}</td>
+            <td>${d}</td>
             <td>${productsArr[i].name}</td>
             <td>${productsArr[i].price}</td>
             <td>${productsArr[i].category}</td>
