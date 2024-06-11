@@ -6,7 +6,7 @@ var addUpdateBtn = document.getElementById("addUpdateBtn")
 var cancelBtnContainer = document.getElementById("cancelBtnContainer")
 var productsArr = JSON.parse(localStorage.getItem("products")) ?? [];
 var searchInput = document.getElementById("searchInput")
-const d = (new Date).toISOString().split("T")[0];
+let d = (new Date).toISOString().split("T")[0];
 
 displayProducts()
 
